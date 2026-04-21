@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pesantren Olympic Nur Khodijah I – Bergabunglah!</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Tajawal:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --green: #1a6b3a;
+  --green-light: #2d9b57;
+  --gold: #c8952a;
+  --gold-light: #f0c060;
+  --cream: #faf6ef;
+  --dark: #0f1e14;
+  --text: #1c2e1e;
+  --muted: #5a7a5e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(160deg, var(--dark) 0%, #0b2d1a 55%, #143d22 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 60px 24px 70px;
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(200,149,42,.18) 0%, transparent 55%),
+    radial-gradient(circle at 80% 20%, rgba(45,155,87,.18) 0%, transparent 55%);
+}
+
+.hero-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: .05;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #fff 0px, #fff 1px,
+    transparent 1px, transparent 28px
+  );
+}
+
+.badge {
+  display: inline-block;
+  background: var(--gold);
+  color: #fff;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 7vw, 3.6rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.hero-title span {
+  color: var(--gold-light);
+}
+
+.hero-sub {
+  font-family: 'Tajawal', sans-serif;
+  font-size: clamp(.95rem, 3vw, 1.15rem);
+  color: rgba(255,255,255,.72);
+  margin-top: 14px;
+}
+
+.hero-tagline {
+  margin-top: 28px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pill {
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.2);
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 30px;
+}
+
+.pill.gold {
+  background: rgba(200,149,42,.35);
+  border-color: var(--gold);
+}
+
+/* STATS */
+.stats {
+  background: var(--green);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 10px 20px;
+  border-right: 1px solid rgba(255,255,255,.2);
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--gold-light);
+}
+
+.stat-label {
+  font-size: .75rem;
+  color: rgba(255,255,255,.8);
+}
+
+/* SECTION */
+.section {
+  padding: 50px 20px;
+  max-width: 820px;
+  margin: auto;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--green);
+  margin-bottom: 10px;
+}
+
+.section-desc {
+  color: var(--muted);
+  margin-bottom: 25px;
+}
+
+/* CARD */
+.sports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 14px;
+}
+
+.sport-card {
+  background: #fff;
+  border: 2px solid #e8f0e9;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  transition: .2s;
+}
+
+.sport-card:hover {
+  border-color: var(--green);
+  transform: translateY(-3px);
+}
+
+.sport-icon {
+  font-size: 1.8rem;
+}
+
+.sport-name {
+  font-weight: 700;
+}
+
+.sport-note {
+  font-size: .8rem;
+  color: var(--muted);
+}
+
+/* CTA */
+.cta {
+  background: var(--dark);
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  font-size: .8rem;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-pattern"></div>
+  <div class="badge">Pesantren Atlet Pertama di Indonesia</div>
+
+  <h1 class="hero-title">
+    Pesantren Olympic<br>
+    <span>Nur Khodijah I</span>
+  </h1>
+
+  <p class="hero-sub">
+    Mamba'ul Ma'arif · Jombang · 2026
+  </p>
+
+  <div class="hero-tagline">
+    <span class="pill">🏆 Atlet</span>
+    <span class="pill">📖 Islami</span>
+    <span class="pill gold">💰 Beasiswa</span>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat-item">
+    <div class="stat-num">6</div>
+    <div class="stat-label">Olahraga</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">30</div>
+    <div class="stat-label">Santri</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">Beasiswa</div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-title">Cabang Olahraga</div>
+
+  <div class="sports-grid">
+    <div class="sport-card">
+      <div class="sport-icon">⚽</div>
+      <div>
+        <div class="sport-name">Sepak Bola</div>
+        <div class="sport-note">Liga & kompetisi</div>
+      </div>
+    </div>
+
+    <div class="sport-card">
+      <div class="sport-icon">🏐</div>
+      <div>
+        <div class="sport-name">Voli</div>
+        <div class="sport-note">Teknik & tim</div>
+      </div>
+    </div>
+
+    <div class="sport-card">
+      <div class="sport-icon">🥋</div>
+      <div>
+        <div class="sport-name">Pencak Silat</div>
+        <div class="sport-note">Pagar Nusa</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Bergabung Sekarang</h2>
+  <p>Hubungi tim untuk info pendaftaran</p>
+
+  <a href="https://wa.me/6280000000000" class="cta-btn">
+    Daftar via WhatsApp
+  </a>
+</section>
+
+<footer>
+  Pesantren Olympic Nur Khodijah · Jombang · 2026
+</footer>
+
+</body>
+</html>
