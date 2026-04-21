@@ -1,241 +1,521 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
+
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pesantren Olympic Nur Khodijah I – Bergabunglah!</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Tajawal:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
 <style>
-:root {
-  --green: #1a6b3a;
-  --green-light: #2d9b57;
-  --gold: #c8952a;
-  --gold-light: #f0c060;
-  --cream: #faf6ef;
-  --dark: #0f1e14;
-  --text: #1c2e1e;
-  --muted: #5a7a5e;
-}
+  :root {
+    --green: #1a6b3a;
+    --green-light: #2d9b57;
+    --gold: #c8952a;
+    --gold-light: #f0c060;
+    --cream: #faf6ef;
+    --dark: #0f1e14;
+    --text: #1c2e1e;
+    --muted: #5a7a5e;
+  }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
+- { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--cream);
-  color: var(--text);
-  min-height: 100vh;
-  overflow-x: hidden;
+font-family: ‘DM Sans’, sans-serif;
+background: var(–cream);
+color: var(–text);
+min-height: 100vh;
+overflow-x: hidden;
 }
 
-/* HERO */
+/* ── HERO ── */
 .hero {
-  background: linear-gradient(160deg, var(--dark) 0%, #0b2d1a 55%, #143d22 100%);
-  position: relative;
-  overflow: hidden;
-  padding: 60px 24px 70px;
-  text-align: center;
+background: linear-gradient(160deg, var(–dark) 0%, #0b2d1a 55%, #143d22 100%);
+position: relative;
+overflow: hidden;
+padding: 60px 24px 70px;
+text-align: center;
 }
 
 .hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(circle at 20% 80%, rgba(200,149,42,.18) 0%, transparent 55%),
-    radial-gradient(circle at 80% 20%, rgba(45,155,87,.18) 0%, transparent 55%);
+content: ‘’;
+position: absolute;
+inset: 0;
+background-image:
+radial-gradient(circle at 20% 80%, rgba(200,149,42,.18) 0%, transparent 55%),
+radial-gradient(circle at 80% 20%, rgba(45,155,87,.18) 0%, transparent 55%);
 }
 
 .hero-pattern {
-  position: absolute;
-  inset: 0;
-  opacity: .05;
-  background-image: repeating-linear-gradient(
-    45deg,
-    #fff 0px, #fff 1px,
-    transparent 1px, transparent 28px
-  );
+position: absolute;
+inset: 0;
+opacity: .05;
+background-image: repeating-linear-gradient(
+45deg,
+#fff 0px, #fff 1px,
+transparent 1px, transparent 28px
+);
 }
 
 .badge {
-  display: inline-block;
-  background: var(--gold);
-  color: #fff;
-  font-size: .7rem;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  padding: 5px 16px;
-  border-radius: 20px;
-  margin-bottom: 20px;
+display: inline-block;
+background: var(–gold);
+color: #fff;
+font-size: .7rem;
+font-weight: 700;
+letter-spacing: .12em;
+text-transform: uppercase;
+padding: 5px 16px;
+border-radius: 20px;
+margin-bottom: 20px;
+position: relative;
+animation: fadeDown .7s ease both;
 }
 
 .hero-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2rem, 7vw, 3.6rem);
-  font-weight: 900;
-  color: #fff;
-  line-height: 1.1;
+font-family: ‘Playfair Display’, serif;
+font-size: clamp(2rem, 7vw, 3.6rem);
+font-weight: 900;
+color: #fff;
+line-height: 1.1;
+position: relative;
+animation: fadeDown .7s .1s ease both;
 }
 
 .hero-title span {
-  color: var(--gold-light);
+color: var(–gold-light);
 }
 
 .hero-sub {
-  font-family: 'Tajawal', sans-serif;
-  font-size: clamp(.95rem, 3vw, 1.15rem);
-  color: rgba(255,255,255,.72);
-  margin-top: 14px;
+font-family: ‘Tajawal’, sans-serif;
+font-size: clamp(.95rem, 3vw, 1.15rem);
+color: rgba(255,255,255,.72);
+margin-top: 14px;
+position: relative;
+animation: fadeDown .7s .2s ease both;
 }
 
 .hero-tagline {
-  margin-top: 28px;
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: center;
+margin-top: 28px;
+display: inline-flex;
+gap: 8px;
+flex-wrap: wrap;
+justify-content: center;
+position: relative;
+animation: fadeDown .7s .3s ease both;
 }
 
 .pill {
-  background: rgba(255,255,255,.1);
-  border: 1px solid rgba(255,255,255,.2);
-  color: #fff;
-  font-size: .8rem;
-  font-weight: 600;
-  padding: 6px 14px;
-  border-radius: 30px;
+background: rgba(255,255,255,.1);
+border: 1px solid rgba(255,255,255,.2);
+color: #fff;
+font-size: .8rem;
+font-weight: 600;
+padding: 6px 14px;
+border-radius: 30px;
+backdrop-filter: blur(6px);
 }
 
-.pill.gold {
-  background: rgba(200,149,42,.35);
-  border-color: var(--gold);
-}
+.pill.gold { background: rgba(200,149,42,.35); border-color: var(–gold); }
 
-/* STATS */
+/* ── STAT STRIP ── */
 .stats {
-  background: var(--green);
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+background: var(–green);
+padding: 20px 24px;
+display: flex;
+justify-content: center;
+gap: 0;
+flex-wrap: wrap;
 }
 
 .stat-item {
-  text-align: center;
-  padding: 10px 20px;
-  border-right: 1px solid rgba(255,255,255,.2);
+text-align: center;
+padding: 10px 28px;
+border-right: 1px solid rgba(255,255,255,.2);
+animation: fadeUp .6s ease both;
 }
 
-.stat-item:last-child {
-  border-right: none;
-}
+.stat-item:last-child { border-right: none; }
 
 .stat-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  font-weight: 900;
-  color: var(--gold-light);
+font-family: ‘Playfair Display’, serif;
+font-size: 1.9rem;
+font-weight: 900;
+color: var(–gold-light);
 }
 
 .stat-label {
-  font-size: .75rem;
-  color: rgba(255,255,255,.8);
+font-size: .72rem;
+color: rgba(255,255,255,.8);
+font-weight: 600;
+letter-spacing: .05em;
+text-transform: uppercase;
+margin-top: 2px;
 }
 
-/* SECTION */
-.section {
-  padding: 50px 20px;
-  max-width: 820px;
-  margin: auto;
-}
+/* ── SECTIONS ── */
+.section { padding: 52px 24px; max-width: 820px; margin: 0 auto; }
 
 .section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  color: var(--green);
-  margin-bottom: 10px;
+font-family: ‘Playfair Display’, serif;
+font-size: 1.55rem;
+font-weight: 700;
+color: var(–green);
+margin-bottom: 8px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.section-title::before {
+content: ‘’;
+display: inline-block;
+width: 5px;
+height: 24px;
+background: var(–gold);
+border-radius: 3px;
+flex-shrink: 0;
 }
 
 .section-desc {
-  color: var(--muted);
-  margin-bottom: 25px;
+color: var(–muted);
+font-size: .92rem;
+margin-bottom: 28px;
+padding-left: 15px;
 }
 
-/* CARD */
+/* ── CABANG OLAHRAGA ── */
 .sports-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 14px;
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+gap: 14px;
 }
 
 .sport-card {
-  background: #fff;
-  border: 2px solid #e8f0e9;
-  border-radius: 12px;
-  padding: 16px;
-  display: flex;
-  gap: 12px;
-  transition: .2s;
+background: #fff;
+border: 2px solid #e8f0e9;
+border-radius: 14px;
+padding: 20px 18px;
+display: flex;
+align-items: center;
+gap: 14px;
+transition: all .25s ease;
+cursor: default;
 }
 
 .sport-card:hover {
-  border-color: var(--green);
-  transform: translateY(-3px);
+border-color: var(–green-light);
+transform: translateY(-3px);
+box-shadow: 0 8px 24px rgba(26,107,58,.12);
 }
 
 .sport-icon {
-  font-size: 1.8rem;
+font-size: 2rem;
+flex-shrink: 0;
+width: 48px;
+height: 48px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: var(–cream);
+border-radius: 10px;
 }
 
 .sport-name {
-  font-weight: 700;
+font-weight: 700;
+font-size: .95rem;
+color: var(–text);
 }
 
 .sport-note {
-  font-size: .8rem;
-  color: var(--muted);
+font-size: .76rem;
+color: var(–muted);
+margin-top: 3px;
 }
 
-/* CTA */
+/* ── BEASISWA HIGHLIGHT ── */
+.beasiswa-box {
+background: linear-gradient(135deg, var(–green) 0%, #1d5c34 100%);
+border-radius: 18px;
+padding: 36px 28px;
+color: #fff;
+position: relative;
+overflow: hidden;
+}
+
+.beasiswa-box::after {
+content: ‘🎓’;
+position: absolute;
+right: 20px;
+bottom: 10px;
+font-size: 5rem;
+opacity: .12;
+}
+
+.beasiswa-title {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.4rem;
+font-weight: 700;
+margin-bottom: 6px;
+color: var(–gold-light);
+}
+
+.beasiswa-list {
+list-style: none;
+margin-top: 16px;
+display: grid;
+gap: 10px;
+}
+
+.beasiswa-list li {
+display: flex;
+align-items: flex-start;
+gap: 10px;
+font-size: .9rem;
+}
+
+.beasiswa-list li::before {
+content: ‘✓’;
+background: var(–gold);
+color: #fff;
+font-weight: 700;
+font-size: .7rem;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+margin-top: 2px;
+}
+
+/* ── ACCORDION JALUR SELEKSI ── */
+.accordion { border: 2px solid #e8f0e9; border-radius: 14px; overflow: hidden; }
+
+.acc-item { border-bottom: 1px solid #e8f0e9; }
+.acc-item:last-child { border-bottom: none; }
+
+.acc-header {
+padding: 18px 20px;
+cursor: pointer;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: #fff;
+font-weight: 700;
+font-size: .95rem;
+transition: background .2s;
+user-select: none;
+}
+
+.acc-header:hover { background: #f6fbf7; }
+.acc-header.open { background: #f0faf2; color: var(–green); }
+
+.acc-arrow {
+font-size: .75rem;
+transition: transform .25s;
+}
+
+.acc-header.open .acc-arrow { transform: rotate(180deg); }
+
+.acc-body {
+max-height: 0;
+overflow: hidden;
+transition: max-height .35s ease, padding .25s;
+background: #f9fdf9;
+font-size: .88rem;
+color: var(–muted);
+}
+
+.acc-body.open {
+max-height: 300px;
+padding: 16px 20px 20px;
+}
+
+.acc-body ul { padding-left: 16px; display: grid; gap: 6px; }
+
+/* ── ROADMAP TIMELINE ── */
+.timeline { position: relative; padding-left: 28px; }
+
+.timeline::before {
+content: ‘’;
+position: absolute;
+left: 8px;
+top: 6px;
+bottom: 0;
+width: 2px;
+background: linear-gradient(to bottom, var(–green), var(–gold));
+}
+
+.tl-item {
+position: relative;
+margin-bottom: 22px;
+}
+
+.tl-dot {
+position: absolute;
+left: -24px;
+top: 4px;
+width: 14px;
+height: 14px;
+border-radius: 50%;
+background: var(–green);
+border: 3px solid var(–cream);
+box-shadow: 0 0 0 2px var(–green);
+}
+
+.tl-year {
+font-family: ‘Playfair Display’, serif;
+font-weight: 700;
+font-size: .85rem;
+color: var(–gold);
+letter-spacing: .05em;
+margin-bottom: 3px;
+}
+
+.tl-text {
+font-size: .88rem;
+font-weight: 600;
+color: var(–text);
+margin-bottom: 3px;
+}
+
+.tl-detail {
+font-size: .8rem;
+color: var(–muted);
+}
+
+/* ── KPI VISUAL ── */
+.kpi-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 12px;
+}
+
+.kpi-card {
+background: #fff;
+border: 2px solid #e8f0e9;
+border-radius: 12px;
+padding: 16px 12px;
+text-align: center;
+transition: all .2s;
+}
+
+.kpi-card:hover {
+border-color: var(–gold);
+transform: scale(1.03);
+}
+
+.kpi-pct {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.6rem;
+font-weight: 900;
+color: var(–green);
+}
+
+.kpi-label {
+font-size: .73rem;
+font-weight: 700;
+color: var(–muted);
+margin-top: 4px;
+text-transform: uppercase;
+letter-spacing: .04em;
+}
+
+/* ── CTA ── */
 .cta {
-  background: var(--dark);
-  color: #fff;
-  text-align: center;
-  padding: 60px 20px;
+background: linear-gradient(135deg, #0f1e14 0%, #1a3a22 100%);
+text-align: center;
+padding: 60px 24px;
+position: relative;
+overflow: hidden;
+}
+
+.cta::before {
+content: ‘’;
+position: absolute;
+inset: 0;
+background: radial-gradient(circle at 50% 50%, rgba(200,149,42,.15) 0%, transparent 65%);
+}
+
+.cta-title {
+font-family: ‘Playfair Display’, serif;
+font-size: clamp(1.6rem, 5vw, 2.4rem);
+color: #fff;
+position: relative;
+margin-bottom: 10px;
+}
+
+.cta-sub {
+color: rgba(255,255,255,.65);
+font-size: .95rem;
+position: relative;
+margin-bottom: 32px;
 }
 
 .cta-btn {
-  display: inline-block;
-  background: var(--gold);
-  color: #fff;
-  padding: 14px 30px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 20px;
+display: inline-block;
+background: linear-gradient(135deg, var(–gold) 0%, #e0a830 100%);
+color: #fff;
+font-weight: 700;
+font-size: 1rem;
+padding: 14px 36px;
+border-radius: 40px;
+text-decoration: none;
+position: relative;
+box-shadow: 0 6px 24px rgba(200,149,42,.4);
+transition: all .25s;
+border: none;
+cursor: pointer;
+letter-spacing: .02em;
 }
 
+.cta-btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 10px 32px rgba(200,149,42,.55);
+}
+
+/* ── DIVIDER ── */
+.divider {
+height: 3px;
+background: linear-gradient(to right, transparent, var(–gold), transparent);
+margin: 0 auto;
+max-width: 500px;
+}
+
+/* ── FOOTER ── */
 footer {
-  background: #111;
-  color: #aaa;
-  text-align: center;
-  padding: 20px;
-  font-size: .8rem;
+background: var(–dark);
+color: rgba(255,255,255,.5);
+text-align: center;
+padding: 20px;
+font-size: .78rem;
+}
+
+footer strong { color: rgba(255,255,255,.8); }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeDown {
+from { opacity: 0; transform: translateY(-18px); }
+to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+from { opacity: 0; transform: translateY(14px); }
+to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 480px) {
+.kpi-grid { grid-template-columns: repeat(2, 1fr); }
+.stat-item { padding: 10px 16px; }
+.stat-num { font-size: 1.5rem; }
 }
   /* ===== MOBILE OPTIMIZATION ===== */
 @media (max-width: 480px) {
 
-  /* HERO */
   .hero {
     padding: 40px 16px 50px;
   }
@@ -253,13 +533,11 @@ footer {
     padding: 4px 12px;
   }
 
-  /* TAGLINE */
   .pill {
     font-size: 0.7rem;
     padding: 5px 10px;
   }
 
-  /* STATS */
   .stats {
     flex-direction: column;
     gap: 10px;
@@ -274,7 +552,6 @@ footer {
     border-bottom: none;
   }
 
-  /* SECTION */
   .section {
     padding: 40px 16px;
   }
@@ -283,33 +560,15 @@ footer {
     font-size: 1.3rem;
   }
 
-  /* GRID jadi 1 kolom */
   .sports-grid {
     grid-template-columns: 1fr;
-  }
-
-  /* CARD */
-  .sport-card {
-    padding: 14px;
-    border-radius: 10px;
-  }
-
-  .sport-icon {
-    font-size: 1.6rem;
-  }
-
-  /* CTA */
-  .cta {
-    padding: 50px 16px 80px;
   }
 
   .cta-btn {
     width: 100%;
     padding: 16px;
-    font-size: 1rem;
   }
 
-  /* STICKY BUTTON */
   .cta-fixed {
     position: fixed;
     bottom: 15px;
@@ -321,87 +580,288 @@ footer {
   }
 }
 </style>
-</head>
 
+</head>
 <body>
+
+<!-- HERO -->
 
 <section class="hero">
   <div class="hero-pattern"></div>
-  <div class="badge">Pesantren Atlet Pertama di Indonesia</div>
-
+  <div class="badge">🕌 Pesantren Atlet Pertama di Indonesia</div>
   <h1 class="hero-title">
     Pesantren Olympic<br>
     <span>Nur Khodijah I</span>
   </h1>
-
-  <p class="hero-sub">
-    Mamba'ul Ma'arif · Jombang · 2026
-  </p>
-
+  <p class="hero-sub">Mamba'ul Ma'arif · Kabupaten Jombang, Jawa Timur · Tahun 2026</p>
   <div class="hero-tagline">
-    <span class="pill">🏆 Atlet</span>
-    <span class="pill">📖 Islami</span>
-    <span class="pill gold">💰 Beasiswa</span>
+    <span class="pill">🏆 Akademi Atlet</span>
+    <span class="pill">📖 Boarding School Islami</span>
+    <span class="pill gold">💰 Beasiswa Penuh</span>
+    <span class="pill">🎓 Mitra UNESA</span>
   </div>
 </section>
 
+<!-- STAT STRIP -->
+
 <div class="stats">
-  <div class="stat-item">
+  <div class="stat-item" style="animation-delay:.1s">
     <div class="stat-num">6</div>
-    <div class="stat-label">Olahraga</div>
+    <div class="stat-label">Cabang Olahraga</div>
   </div>
-  <div class="stat-item">
+  <div class="stat-item" style="animation-delay:.2s">
     <div class="stat-num">30</div>
-    <div class="stat-label">Santri</div>
+    <div class="stat-label">Santri Tahun 1</div>
   </div>
-  <div class="stat-item">
+  <div class="stat-item" style="animation-delay:.3s">
+    <div class="stat-num">120</div>
+    <div class="stat-label">Target Tahun 5</div>
+  </div>
+  <div class="stat-item" style="animation-delay:.4s">
     <div class="stat-num">100%</div>
     <div class="stat-label">Beasiswa</div>
   </div>
 </div>
 
-<section class="section">
-  <div class="section-title">Cabang Olahraga</div>
+<!-- BEASISWA -->
 
+<section class="section">
+  <div class="section-title">Beasiswa Penuh – Tanpa Biaya Pendidikan</div>
+  <p class="section-desc">Orang tua hanya menanggung uang saku pribadi santri</p>
+
+  <div class="beasiswa-box">
+    <div class="beasiswa-title">Apa yang kami tanggung?</div>
+    <p style="font-size:.9rem; color:rgba(255,255,255,.75)">Semua biaya utama pendidikan santri ditanggung penuh oleh pesantren</p>
+    <ul class="beasiswa-list">
+      <li>SPP sekolah (SMP & SMA) – ditanggung penuh</li>
+      <li>Biaya pondok & asrama – ditanggung penuh</li>
+      <li>Makan 3x sehari – ditanggung penuh</li>
+      <li>Pelatihan olahraga profesional – ditanggung penuh</li>
+      <li>Peralatan standar setiap cabang – ditanggung penuh</li>
+      <li>Jalur beasiswa kuliah ke UNESA bagi santri berprestasi</li>
+    </ul>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CABANG OLAHRAGA -->
+
+<section class="section">
+  <div class="section-title">6 Cabang Program Atlet</div>
+  <p class="section-desc">Pilih satu cabang saat mendaftar · Latihan 5–6×/minggu, 90–120 menit/sesi</p>
   <div class="sports-grid">
     <div class="sport-card">
       <div class="sport-icon">⚽</div>
       <div>
         <div class="sport-name">Sepak Bola</div>
-        <div class="sport-note">Liga & kompetisi</div>
+        <div class="sport-note">Liga Santri · POPDA</div>
       </div>
     </div>
-
     <div class="sport-card">
       <div class="sport-icon">🏐</div>
       <div>
-        <div class="sport-name">Voli</div>
-        <div class="sport-note">Teknik & tim</div>
+        <div class="sport-name">Bola Voli</div>
+        <div class="sport-note">Teknik & sistem 6v6</div>
       </div>
     </div>
-
     <div class="sport-card">
       <div class="sport-icon">🥋</div>
       <div>
         <div class="sport-name">Pencak Silat</div>
-        <div class="sport-note">Pagar Nusa</div>
+        <div class="sport-note">Pagar Nusa – tradisi & prestasi</div>
+      </div>
+    </div>
+    <div class="sport-card">
+      <div class="sport-icon">🏓</div>
+      <div>
+        <div class="sport-name">Tenis Meja</div>
+        <div class="sport-note">Sesi 90 menit/hari</div>
+      </div>
+    </div>
+    <div class="sport-card">
+      <div class="sport-icon">🏸</div>
+      <div>
+        <div class="sport-name">Bulu Tangkis</div>
+        <div class="sport-note">Footwork · Smash · Rally</div>
+      </div>
+    </div>
+    <div class="sport-card">
+      <div class="sport-icon">⚽</div>
+      <div>
+        <div class="sport-name">Futsal</div>
+        <div class="sport-note">Teknik & strategi taktis</div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="cta">
-  <h2>Bergabung Sekarang</h2>
-  <p>Hubungi tim untuk info pendaftaran</p>
+<div class="divider"></div>
 
-  <a href="https://wa.me/6280000000000" class="cta-btn">
-    Daftar via WhatsApp
-  </a>
+<!-- JALUR SELEKSI ACCORDION -->
+
+<section class="section">
+  <div class="section-title">3 Jalur Pendaftaran</div>
+  <p class="section-desc">Klik setiap jalur untuk melihat persyaratannya</p>
+  <div class="accordion">
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggleAcc(this)">
+        🥇 Jalur Prestasi
+        <span class="acc-arrow">▼</span>
+      </div>
+      <div class="acc-body">
+        <ul>
+          <li>Pernah juara minimal tingkat kabupaten dalam 2 tahun terakhir</li>
+          <li>Verifikasi piagam penghargaan</li>
+          <li>Wawancara calon santri & orang tua</li>
+          <li>Rapor semester terakhir rata-rata ≥ 70</li>
+        </ul>
+      </div>
+    </div>
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggleAcc(this)">
+        💪 Jalur Bakat
+        <span class="acc-arrow">▼</span>
+      </div>
+      <div class="acc-body">
+        <ul>
+          <li>Belum ada prestasi tetapi memiliki potensi fisik & teknik</li>
+          <li>Tes fisik: VO2Max, kelincahan, daya ledak</li>
+          <li>Tes teknik spesifik per cabang olahraga</li>
+          <li>Psikotes motivasi & ketahanan stres</li>
+        </ul>
+      </div>
+    </div>
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggleAcc(this)">
+        🎓 Jalur Rekomendasi UNESA
+        <span class="acc-arrow">▼</span>
+      </div>
+      <div class="acc-body">
+        <ul>
+          <li>Direkomendasikan oleh dosen FIK UNESA atau Pusat Studi Olahraga</li>
+          <li>Seleksi bersama tim UNESA (talent scouting)</li>
+          <li>Prosedur administrasi standar pesantren</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
+<div class="divider"></div>
+
+<!-- KPI PENILAIAN -->
+
+<section class="section">
+  <div class="section-title">Sistem KPI Santri-Atlet</div>
+  <p class="section-desc">Evaluasi bulanan dengan minimum skor 75/100 untuk mempertahankan beasiswa</p>
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-pct">50%</div>
+      <div class="kpi-label">Olahraga</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-pct">15%</div>
+      <div class="kpi-label">Akademik</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-pct">15%</div>
+      <div class="kpi-label">Agama</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-pct">15%</div>
+      <div class="kpi-label">Akhlak</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-pct">5%</div>
+      <div class="kpi-label">Kehadiran</div>
+    </div>
+    <div class="kpi-card" style="border-color:var(--gold)">
+      <div class="kpi-pct" style="color:var(--gold)">≥75</div>
+      <div class="kpi-label">Min. Lulus</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ROADMAP -->
+
+<section class="section">
+  <div class="section-title">Roadmap 5 Tahun</div>
+  <p class="section-desc">Target bertahap menuju pusat pembinaan atlet pesantren skala Jawa Timur</p>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2026 – TAHUN 1</div>
+      <div class="tl-text">Pendirian & Uji Coba</div>
+      <div class="tl-detail">30 santri · MoU UNESA · Legalitas & fasilitas dasar</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--green-light)"></div>
+      <div class="tl-year">2027 – TAHUN 2</div>
+      <div class="tl-text">Stabilisasi & Reputasi</div>
+      <div class="tl-detail">60 santri · POPDA & Liga Santri Jatim · Monitoring digital KPI</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--gold)"></div>
+      <div class="tl-year">2028 – TAHUN 3</div>
+      <div class="tl-text">Pengembangan & Pelatnas</div>
+      <div class="tl-detail">90 santri · POPNAS & O2SN · Kelas pelatih bersertifikat</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--gold)"></div>
+      <div class="tl-year">2029 – TAHUN 4</div>
+      <div class="tl-text">Beasiswa Karir & Kuliah</div>
+      <div class="tl-detail">100 santri · Jalur afirmasi UNESA aktif · Magang di klub profesional</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--gold-light)"></div>
+      <div class="tl-year">2030 – TAHUN 5</div>
+      <div class="tl-text">Pusat Atlet Pesantren Jatim</div>
+      <div class="tl-detail">120 santri · 10+ alumni ke UNESA · Kerjasama KONI Jatim</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+  <h2 class="cta-title">Bergabunglah Bersama Kami!</h2>
+  <p class="cta-sub">
+    Untuk santri SMP & SMA usia 13–18 tahun · Jombang, Jawa Timur<br>
+    Hubungi Tim Perintis Pesantren Olympic Nur Khodijah Mamba'ul Ma'arif
+  </p>
+  <button class="cta-btn" onclick="alert('Hubungi Tim Perintis Pesantren\nklik tombol dibawah\nuntuk informasi pendaftaran lebih lanjut!')">
+    📋 Daftar Sekarang
+  </button>
+</section>
+
+<!-- FOOTER -->
+
 <footer>
-  Pesantren Olympic Nur Khodijah I · Jombang · 2026
+  <strong>Pesantren Olympic Nur Khodijah I Mamba'ul Ma'arif</strong><br>
+  Denanyar, Kabupaten Jombang – Jawa Timur · 2026<br>
+  Bermitra dengan Universitas Negeri Surabaya (UNESA)
 </footer>
 
+<script>
+  function toggleAcc(header) {
+    const body = header.nextElementSibling;
+    const isOpen = header.classList.contains('open');
+    // close all
+    document.querySelectorAll('.acc-header').forEach(h => h.classList.remove('open'));
+    document.querySelectorAll('.acc-body').forEach(b => b.classList.remove('open'));
+    if (!isOpen) {
+      header.classList.add('open');
+      body.classList.add('open');
+    }
+  }
+</script>
+<a href="https://wa.me/6285648614395" class="cta-btn cta-fixed">
+  📲 Daftar Sekarang
+</a>
+
+</body>
 </body>
 </html>
