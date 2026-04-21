@@ -232,6 +232,94 @@ footer {
   padding: 20px;
   font-size: .8rem;
 }
+  /* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 480px) {
+
+  /* HERO */
+  .hero {
+    padding: 40px 16px 50px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-sub {
+    font-size: 0.9rem;
+  }
+
+  .badge {
+    font-size: 0.65rem;
+    padding: 4px 12px;
+  }
+
+  /* TAGLINE */
+  .pill {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+
+  /* STATS */
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+  }
+
+  .stat-item:last-child {
+    border-bottom: none;
+  }
+
+  /* SECTION */
+  .section {
+    padding: 40px 16px;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  /* GRID jadi 1 kolom */
+  .sports-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CARD */
+  .sport-card {
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .sport-icon {
+    font-size: 1.6rem;
+  }
+
+  /* CTA */
+  .cta {
+    padding: 50px 16px 80px;
+  }
+
+  .cta-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 1rem;
+  }
+
+  /* STICKY BUTTON */
+  .cta-fixed {
+    position: fixed;
+    bottom: 15px;
+    left: 16px;
+    right: 16px;
+    z-index: 999;
+    border-radius: 50px;
+    text-align: center;
+  }
+}
 </style>
 </head>
 
@@ -312,7 +400,7 @@ footer {
 </section>
 
 <footer>
-  Pesantren Olympic Nur Khodijah · Jombang · 2026
+  Pesantren Olympic Nur Khodijah I · Jombang · 2026
 </footer>
 
 </body>
