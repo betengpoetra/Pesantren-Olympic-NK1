@@ -72,7 +72,7 @@ footer {
   z-index: 1;
 }
 .hero-bg-glow {
-position: absolute; inset: 0; pointer-events: none;
+position: relative; inset: 0; pointer-events: none;
 background:
 radial-gradient(circle at 20% 80%, rgba(200,149,42,0.18) 0%, transparent 55%),
 radial-gradient(circle at 80% 20%, rgba(45,155,87,0.18)  0%, transparent 55%);
@@ -98,7 +98,7 @@ filter: drop-shadow(0 6px 18px rgba(0,0,0,0.5));
 
 .badge {
 display: inline-block;
-background: var(–gold); color: #fff;
+background: var(-–gold); color: #fff;
 font-size: 0.68rem; font-weight: 700;
 letter-spacing: 0.12em; text-transform: uppercase;
 padding: 5px 16px; border-radius: 20px;
@@ -111,7 +111,7 @@ font-size: clamp(2rem, 7vw, 3.6rem); font-weight: 900;
 color: #fff; line-height: 1.1;
 position: relative; animation: fadeDown 0.7s 0.1s ease both;
 }
-.hero-title span { color: var(–gold-light); }
+.hero-title span { color: var(-–gold--light); }
 .hero-sub {
 font-family: ‘Tajawal’, sans-serif;
 font-size: clamp(0.9rem, 3vw, 1.1rem); color: rgba(255,255,255,0.72);
@@ -133,7 +133,7 @@ border-radius: 10px; padding: 10px 20px;
 max-width: 460px;
 }
 .hero-address-text { text-align: left; color: rgba(255,255,255,0.9); font-size: 0.82rem; line-height: 1.55; }
-.hero-address-text strong { display: block; color: var(–gold-light); font-size: 0.88rem; font-weight: 700; margin-bottom: 2px; }
+.hero-address-text strong { display: block; color: var(–-gold--light); font-size: 0.88rem; font-weight: 700; margin-bottom: 2px; }
 
 .hero-tagline {
 margin-top: 22px; display: inline-flex;
@@ -149,7 +149,7 @@ padding: 6px 14px; border-radius: 30px; backdrop-filter: blur(6px);
 
 /* STATS */
 .stats {
-background: var(–green); padding: 20px 24px;
+background: var(–-green); padding: 20px 24px;
 display: flex; justify-content: center; flex-wrap: wrap; gap: 0;
 }
 .stat-item { text-align: center; padding: 10px 28px; border-right: 1px solid rgba(255,255,255,0.2); }
@@ -161,13 +161,13 @@ display: flex; justify-content: center; flex-wrap: wrap; gap: 0;
 .section { padding: 48px 24px; max-width: 820px; margin: 0 auto; }
 .section-title {
 font-family: ‘Playfair Display’, serif; font-size: 1.5rem; font-weight: 700;
-color: var(–green); margin-bottom: 8px; display: flex; align-items: center; gap: 10px;
+color: var(-–green); margin-bottom: 8px; display: flex; align-items: center; gap: 10px;
 }
 .section-title::before {
 content: ‘’; display: inline-block; width: 5px; height: 24px;
-background: var(–gold); border-radius: 3px; flex-shrink: 0;
+background: var(-–gold); border-radius: 3px; flex-shrink: 0;
 }
-.section-desc { color: var(–muted); font-size: 0.9rem; margin-bottom: 26px; padding-left: 15px; }
+.section-desc { color: var(-–muted); font-size: 0.9rem; margin-bottom: 26px; padding-left: 15px; }
 
 /* BEASISWA */
 .beasiswa-box {
@@ -182,12 +182,12 @@ background: rgba(200,149,42,0.12);
 }
 .beasiswa-title {
 font-family: ‘Playfair Display’, serif; font-size: 1.35rem;
-font-weight: 700; margin-bottom: 6px; color: var(–gold-light);
+font-weight: 700; margin-bottom: 6px; color: var(–-gold--light);
 }
 .beasiswa-list { list-style: none; margin-top: 16px; display: grid; gap: 10px; }
 .beasiswa-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; }
 .beasiswa-list li::before {
-content: ‘\2713’; background: var(–gold); color: #fff;
+content: ‘\2713’; background: var(–-gold); color: #fff;
 font-weight: 700; font-size: 0.7rem; width: 20px; height: 20px;
 border-radius: 50%; display: flex; align-items: center; justify-content: center;
 flex-shrink: 0; margin-top: 2px;
@@ -203,14 +203,14 @@ background: #fff; border: 2px solid #e8f0e9; border-radius: 14px;
 padding: 18px 16px; display: flex; align-items: center; gap: 14px;
 transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s; cursor: default;
 }
-.sport-card:hover { border-color: var(–green-light); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(26,107,58,0.12); }
+.sport-card:hover { border-color: var(-–green--light); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(26,107,58,0.12); }
 .sport-icon {
 font-size: 1.8rem; flex-shrink: 0; width: 46px; height: 46px;
 display: flex; align-items: center; justify-content: center;
 background: var(–cream); border-radius: 10px;
 }
-.sport-name { font-weight: 700; font-size: 0.95rem; color: var(–text); }
-.sport-note { font-size: 0.76rem; color: var(–muted); margin-top: 3px; }
+.sport-name { font-weight: 700; font-size: 0.95rem; color: var(–-text); }
+.sport-note { font-size: 0.76rem; color: var(–-muted); margin-top: 3px; }
 
 /* ACCORDION */
 .accordion { border: 2px solid #e8f0e9; border-radius: 14px; overflow: hidden; }
@@ -225,7 +225,7 @@ border: none; width: 100%; text-align: left; color: var(–text);
 font-family: ‘DM Sans’, sans-serif;
 }
 .acc-header:hover { background: #f6fbf7; }
-.acc-header.open  { background: #f0faf2; color: var(–green); }
+.acc-header.open  { background: #f0faf2; color: var(–-green); }
 .acc-arrow { font-size: 0.75rem; transition: transform 0.25s; display: inline-block; }
 .acc-header.open .acc-arrow { transform: rotate(180deg); }
 .acc-body {
@@ -242,40 +242,40 @@ background: #fff; border: 2px solid #e8f0e9; border-radius: 12px;
 padding: 16px 10px; text-align: center;
 transition: border-color 0.2s, transform 0.2s;
 }
-.kpi-card:hover { border-color: var(–gold); transform: scale(1.03); }
-.kpi-pct { font-family: ‘Playfair Display’, serif; font-size: 1.6rem; font-weight: 900; color: var(–green); }
-.kpi-label { font-size: 0.72rem; font-weight: 700; color: var(–muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.04em; }
+.kpi-card:hover { border-color: var(–-gold); transform: scale(1.03); }
+.kpi-pct { font-family: ‘Playfair Display’, serif; font-size: 1.6rem; font-weight: 900; color: var(–-green); }
+.kpi-label { font-size: 0.72rem; font-weight: 700; color: var(–-muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.04em; }
 
 /* TIMELINE */
 .timeline { position: relative; padding-left: 28px; }
 .timeline::before {
 content: ‘’; position: absolute; left: 8px; top: 6px; bottom: 0;
-width: 2px; background: linear-gradient(to bottom, var(–green), var(–gold));
+width: 2px; background: linear-gradient(to bottom, var(–-green), var(–-gold));
 }
 .tl-item { position: relative; margin-bottom: 22px; }
 .tl-dot {
 position: absolute; left: -24px; top: 4px; width: 14px; height: 14px;
 border-radius: 50%; background: var(–green);
-border: 3px solid var(–cream); box-shadow: 0 0 0 2px var(–green);
+border: 3px solid var(–-cream); box-shadow: 0 0 0 2px var(–-green);
 }
-.tl-year  { font-family: ‘Playfair Display’, serif; font-weight: 700; font-size: 0.84rem; color: var(–gold); letter-spacing: 0.05em; margin-bottom: 2px; }
-.tl-text  { font-size: 0.9rem; font-weight: 700; color: var(–text); margin-bottom: 2px; }
-.tl-detail { font-size: 0.8rem; color: var(–muted); }
+.tl-year  { font-family: ‘Playfair Display’, serif; font-weight: 700; font-size: 0.84rem; color: var(–-gold); letter-spacing: 0.05em; margin-bottom: 2px; }
+.tl-text  { font-size: 0.9rem; font-weight: 700; color: var(–-text); margin-bottom: 2px; }
+.tl-detail { font-size: 0.8rem; color: var(–-muted); }
 
 /* ADDRESS CARD */
 .address-card {
 display: flex; gap: 18px; align-items: flex-start;
-background: #fff; border: 2px solid var(–gold); border-radius: 16px;
+background: #fff; border: 2px solid var(–-gold); border-radius: 16px;
 padding: 24px 22px; box-shadow: 0 4px 20px rgba(200,149,42,0.1);
 }
 .address-pin {
 width: 46px; height: 46px; border-radius: 50%; flex-shrink: 0;
-background: linear-gradient(135deg, var(–green), var(–green-light));
+background: linear-gradient(135deg, var(–-green), var(–-green-light));
 display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
 }
-.address-info h3 { font-family: ‘Playfair Display’, serif; font-size: 1.05rem; color: var(–green); margin-bottom: 8px; }
-.address-info p { font-size: 0.88rem; color: var(–text); line-height: 1.75; }
-.address-line { display: flex; align-items: flex-start; gap: 6px; font-size: 0.83rem; color: var(–muted); margin-top: 8px; }
+.address-info h3 { font-family: ‘Playfair Display’, serif; font-size: 1.05rem; color: var(–-green); margin-bottom: 8px; }
+.address-info p { font-size: 0.88rem; color: var(–-text); line-height: 1.75; }
+.address-line { display: flex; align-items: flex-start; gap: 6px; font-size: 0.83rem; color: var(-–muted); margin-top: 8px; }
 
 /* CTA */
 .cta {
