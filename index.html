@@ -319,6 +319,15 @@ display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
 /* CTA */
 .cta {
   background: linear-gradient(135deg, #020303, #0f3d2a);
+  text-align: center;
+  padding: 60px 24px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.cta * {
+  position: relative;
+  z-index: 5;
 }
 .cta::before {
 content: ‘’; position: absolute; inset: 0; pointer-events: none;
@@ -326,10 +335,16 @@ background: radial-gradient(circle at 50% 50%, rgba(200,149,42,0.15) 0%, transpa
 }
 .cta::before {
   z-index: 0;
-  opacity: 0.4; /* tambahkan ini biar nggak terlalu terang */
+  opacity: 0.5; /* tambahkan ini biar nggak terlalu terang */
 }
-.cta-title { font-family: ‘Playfair Display’, serif; font-size: clamp(1.6rem, 5vw, 2.4rem); color: #fff; position: relative; margin-bottom: 10px; }
-.cta-sub { color: rgba(255,255,255,0.85); font-size: 0.95rem; position: relative; margin-bottom: 32px; line-height: 1.7; }
+.cta-title {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.cta-sub {
+  color: rgba(255,255,255,0.9);
+}
 .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; }
 .cta-btn {
   background: linear-gradient(135deg, var(--gold), var(--gold-light));
@@ -347,10 +362,7 @@ box-shadow: 0 6px 24px rgba(37,211,102,0.4);
 .cta-btn.wa:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(37,211,102,0.55); }
 .wa-icon { width: 20px; height: 20px; fill: #fff; flex-shrink: 0; }
 .cta-note { margin-top: 14px; color: rgba(255,255,255,0.4); font-size: 0.78rem; position: relative; }
-.cta > * {
-  position: relative;
-  z-index: 2;
-}
+
 /* FOOTER */
 footer {
 background: var(–-dark); color: rgba(255,255,255,0.5);
