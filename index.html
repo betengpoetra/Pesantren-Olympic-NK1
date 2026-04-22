@@ -350,8 +350,11 @@ footer strong { color: rgba(255,255,255,0.85); }
 
 body {
   font-family: 'DM Sans', sans-serif;
-  background: linear-gradient(180deg, #0f1e14 0%, #121212 80%);
-  color: #eaeaea;
+  background: radial-gradient(circle at 20% 20%, rgba(201,164,76,0.08), transparent 40%),
+              radial-gradient(circle at 80% 0%, rgba(31,122,76,0.12), transparent 40%),
+              linear-gradient(180deg, var(--dark) 0%, #000 100%);
+  color: var(--text);
+  min-height: 100vh;
 }
 </style>
 
